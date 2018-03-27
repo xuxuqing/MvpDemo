@@ -34,11 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button2:
                 mainPersenter.setViewText(new MainMode("第二"));
-
                 break;
             case R.id.button3:
                 mainPersenter.clearViewText();
-
                 break;
             default:
                 break;
