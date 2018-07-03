@@ -1,21 +1,15 @@
 package demo.api.tps550.telpo.com.mymvpdemo.mode;
 
 /**
- * Created by xx on 2018/3/24.
+ *
+ * @author xx
+ * @date 2018/3/24
  */
 
-public class MainMode implements BaseMode {
-    private String name = "";
+public class MainMode implements BaseMode<String> {
 
-    public MainMode(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String loadData() {
+        return "asdasdas";
     }
 }

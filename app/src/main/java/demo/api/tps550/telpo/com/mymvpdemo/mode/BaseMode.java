@@ -3,8 +3,16 @@ package demo.api.tps550.telpo.com.mymvpdemo.mode;
 import java.io.Serializable;
 
 /**
- * Created by xx on 2018/3/24.
+ *
+ * @author xx
+ * @date 2018/3/24
  */
 
-public interface BaseMode extends Serializable {
+public interface BaseMode<T> extends Serializable {
+
+    /**
+     * 加载数据
+     * @return
+     */
+    T loadData();
 }

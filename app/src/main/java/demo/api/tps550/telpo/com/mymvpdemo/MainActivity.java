@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView tv_context;
 
-    private MainPersenter mainPersenter = new MainPersenter();
+    private MainPersenter mainPersenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button2).setOnClickListener(this);
         findViewById(R.id.button3).setOnClickListener(this);
 
+        mainPersenter = new MainPersenter();
         mainPersenter.setView(this);
     }
 
@@ -30,10 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button:
-                mainPersenter.setViewText(new MainMode("第一"));
+                mainPersenter.setViewText();
                 break;
             case R.id.button2:
-                mainPersenter.setViewText(new MainMode("第二"));
+                mainPersenter.setViewText();
                 break;
             case R.id.button3:
                 mainPersenter.clearViewText();
@@ -44,9 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void setNameText(MainMode mode) {
+    public void setNameText(String mode) {
 
-        tv_context.setText(mode.getName());
+        tv_context.setText(mode);
     }
 
     @Override
